@@ -1,0 +1,46 @@
+version: "3"
+services:
+  pg_1:
+    container_name : postgres_1
+    build : postgres_1
+    image: postgres:10
+    volumes:
+      - ./postgres_1/pg:/var/lib/postgres
+    environment:
+      POSTGRESQL_ENABLE_TLS: 'yes'
+      POSTGRES_USER: omer
+      POSTGRES_PASSWORD: simpsons
+      POSTGRES_DB: postgresql
+      PGUSER : omer
+    restart : 
+              always
+    ports:
+      - "5434:5434"
+    networks:
+      - net
+  
+  pg_2:
+    container_name : postgres_2
+    build : postgres_2
+    image: postgres:10
+    volumes:
+      - ./postgres_2/pg:/var/lib/postgres
+    environment:
+      POSTGRESQL_ENABLE_TLS: 'yes'
+      POSTGRES_USER: omer
+      POSTGRES_PASSWORD: simpsons
+      POSTGRES_DB: postgresql
+      PGUSER : omer
+    restart : 
+              always
+    ports:
+      - "5435:5435"
+    networks:
+      - net
+
+networks:
+  net:
+    driver: bridge
+
+
+    
