@@ -1,5 +1,8 @@
 # Docker_TP_BD6
 
+## Contexte :
+Dockerfiles pour pouvoir effectuer le TP6 en BD. Dans le cas, où vous utilisez les machines virtuelles de l'université qui ne marche pas. Pour ceux qui ne connaissent pas Docker je vous invite à aller voir le site officiel : https://www.docker.com/, afin de pouvoir comprendre le principe de base de ces fichiers.
+
 Dans le terminal, palcez vous dans le répertoire contenant le docker-compose et tapez :
 - docker-compose up -d --build 
 pour rentrer dans un container :
